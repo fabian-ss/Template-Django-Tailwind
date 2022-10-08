@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon --> 
+    <link rel="shortcut icon" href="{% static 'ChocoBunny.ico' %}" /> 
+
+    <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous" defer></script>
+
+    <!-- TailWind -->
+     <link href="{% static '/dist/output.css' %} " rel="stylesheet" defer>
+
+    <!-- JavaScript -->
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+    <title>Title page | {% block title %}{% endblock title %}</title>
+
+  </head>
+  <body class="bg-zinc-700 h-screen">
+
+    {% include 'navbar.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.env
+__pycache__
+migrations
+node_modules
+CiudadPaletaCostaAzul.sqlite3
+EnvBackend
